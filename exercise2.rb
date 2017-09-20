@@ -23,3 +23,16 @@ elsif (rate_comedy >= 4)
 else
   puts "I'll recommend a good book for you. Try reading 'War and Peace' by Leo Tolstoy"
 end
+
+# Stretch challenge
+# If they didn't rate any genre higher than 3 but they did rate one genre higher than the other two, recommend the film from that genre.
+
+if (rate_documentary <= 3) && (rate_comedy <= 3) && (rate_drama <= 3)
+  if (rate_documentary > rate_comedy) && (rate_documentary > rate_drama)
+    puts "You should watch '#{documentary}'!"
+  elsif (rate_drama > rate_documentary) && (rate_drama > rate_comedy)
+    puts "You should watch '#{drama}!'"
+  elsif (rate_comedy > rate_documentary) && (rate_comedy > rate_drama)
+    puts "You should watch '#{comedy}!'"
+  end
+end
