@@ -13,8 +13,27 @@ trains_schedule = [
 train_111 = trains_schedule.select { |k, v| k[:train] == "111" }
 train_111_direction = train_111[0][:direction]
 
+# 1. Different option - Easier way.
+trains_schedule[7][:direction]
+
+
 # 2. Save the frequency of train 80B into a variable.
 train_80b = trains_schedule.select { |k, v| k[:train] == "80B" }
 train_80b_frequency = train_80b[0][:frequency_in_minutes]
 
+# 2. Different option - Easier way.
+train_80b_frequency = trains_schedule[5][:frequency_in_minutes]
+
 # 3. Save the direction of train 610 into a variable.
+trains_schedule[3][:direction]
+
+# 4. Create an empty array. Iterate through each train and add the name of the train into the array if it travels north.
+trains_going_north = []
+
+trains_schedule.each do |x|
+  if x[:direction] == "north"
+    trains_going_north << x[:train]
+  end
+end
+
+puts trains_going_north
