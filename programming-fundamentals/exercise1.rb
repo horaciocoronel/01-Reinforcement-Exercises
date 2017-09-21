@@ -48,4 +48,16 @@ end
 
 puts trains_going_east
 
-#6
+#6. You probably just ended up rewriting some of the same code. Move this repeated code into a method that accepts a direction and a list of trains as arguments, and returns a list of just the trains that go in that direction. Call this method once for north and once for east in order to DRY up your code.
+trains_going_east = []
+def train_direction(direction, trains_list)
+  trains_list.each do |x|
+    if x[:direction] == direction
+      puts x[:train]
+    else
+      "not This one"
+    end
+  end
+end
+puts "exercise 1.6"
+train_direction("north",trains_schedule)
