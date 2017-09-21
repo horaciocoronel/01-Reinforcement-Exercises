@@ -37,3 +37,15 @@ trains_schedule.each do |x|
 end
 
 puts trains_going_north
+# 5. Do the same thing for trains that travel east.
+trains_going_east = []
+
+trains_schedule.each do |x|
+  if x[:direction] == "east"
+    trains_going_east << x[:train]
+  end
+end
+
+puts trains_going_east
+
+#6
