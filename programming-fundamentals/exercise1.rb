@@ -61,3 +61,9 @@ def train_direction(direction, trains_list)
 end
 puts "exercise 1.6"
 train_direction("north",trains_schedule)
+train_direction("east",trains_schedule)
+
+# 7. Pick one train and add another key/value pair for the first_departure_time. For simplicity, assume the first train always leave on the hour. You can represent this hour as an integer: 6 for 6:00am, 12 for noon, 13 for 1:00pm, etc.
+puts "exercise 7"
+trains_schedule[2][:departure] = "12"
+puts trains_schedule
